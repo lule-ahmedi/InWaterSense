@@ -1,0 +1,1252 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:inwsc="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:comp="http://sweet.jpl.nasa.gov/2.1/matrCompound.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#"
+    xmlns:repr="http://sweet.jpl.nasa.gov/2.1/repr.owl#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:elem="http://sweet.jpl.nasa.gov/2.1/matrElement.owl#"
+    xmlns:twcp="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://inwatersense.uni-pr.edu/ontologies/inws-regulations.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:body="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+    xmlns:chem="http://sweet.jpl.nasa.gov/2.1/matr.owl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://inwatersense.uni-pr.edu/ontologies/inws-regulations.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ModerateDiazinonMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Diazinon"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PoorBadBenthicMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Bad"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Poor"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Invertebrate_fauna rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BenthicInvertebrateFauna"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#RiversWaterQuality">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#WaterQuality"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateTolueneMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Toluene"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Good">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="WFDEcoStatuses"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="Green"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodAmmoniumMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Good"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighPHMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Acidification_status rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="High"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateMonochlorobenzeneMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Monochlorobenzene"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WFDWaterHardnessStatus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="WFDstatus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Yellow">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="#Moderate"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDEcoStatuses"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Poor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDEcoStatuses"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="Orange"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateSulphateMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Sulphate"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateSSMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SuspendedSolids"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighCopperMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Copper"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateTotalAmmoniaMeasurement">
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalAmmonia"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighGlyphosateMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Glyphosate"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ObservationInterval">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasWaterHardnessStatus"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#WFDWaterHardnessStatus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#WFDstatus"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasStatus"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DeterminedEcologicalStatus"/>
+  <owl:Class rdf:ID="ExYU">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Standard"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateDOMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Oxygenation_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#DissolvedOxygen"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#RiversWaterQuality"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hard">
+    <rdfs:subClassOf rdf:resource="#WFDWaterHardnessStatus"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateZincMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Zinc"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateConductivityMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Salinity rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Conductivity"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Bad">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDEcoStatuses"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="Red"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Other">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Salinity">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="KEPA">
+    <rdfs:subClassOf rdf:resource="#Standard"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phytoplankton">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighTurbidityMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Turbidity"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateMancozebMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Mancozeb"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#River_continuity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydromorphological"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateGlyphosateMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Glyphosate"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+  <owl:Class rdf:ID="Status"/>
+  <owl:Class rdf:about="#Green">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDEcoStatuses"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#Good"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateMRPMeasurement">
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Nutrient_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#MolybdateReactivePhosphorus"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighBODMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateFluorideMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Fluoride"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ECEstatus">
+    <rdfs:subClassOf rdf:resource="#Status"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isObservableAt"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#WFDstatus"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="#hasStatus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasChemStatus"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="hasEcoStatus"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isObservableAt"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodChem">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="WFDChemStatuses"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighDOMeasurement">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#DissolvedOxygen"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phytobenthos_cat">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydrological_regime">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydromorphological"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BiologicalStatus">
+    <rdfs:subClassOf rdf:resource="#DeterminedEcologicalStatus"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Acidification_status">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighCyanideMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Cyanide"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodModerateBenthicMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BenthicInvertebrateFauna"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Oxygenation_conditions">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighChromiumIIIMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumIII"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateArsenicMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Arsenic"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateChromiumVIMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumVI"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateAmmoniumMeasurement">
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Moderate"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodSSMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SuspendedSolids"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighMancozebMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Mancozeb"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodTotalNitrogenMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Nutrient_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalNitrogen"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateDimethoateMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Dimethoate"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateChromiumIIIMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumIII"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighPhenolMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#High"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phenol"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Fish">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydromorphological">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#RiversWaterQuality"/>
+  </owl:Class>
+  <owl:Class rdf:about="#High">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDEcoStatuses"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="Blue"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodDOMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#DissolvedOxygen"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Soft">
+    <rdfs:subClassOf rdf:resource="#WFDWaterHardnessStatus"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighMonochlorobenzeneMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Monochlorobenzene"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighDimethoateMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Dimethoate"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighTemperatureMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Thermal_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Temperature"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#WFDEcoStatuses">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDstatus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighFluorideMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Fluoride"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateCyanideMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Cyanide"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DeterminedChemicalStatus"/>
+  <owl:Class rdf:ID="GoodHighXylenesMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Xylenes"/>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighChromiumVIMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumVI"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#MeasurementSite">
+    <rdfs:subClassOf rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighArsenicMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Arsenic"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+  <owl:Class rdf:about="#Moderate">
+    <rdfs:subClassOf rdf:resource="#WFDEcoStatuses"/>
+    <owl:equivalentClass rdf:resource="#Yellow"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WFDChemStatuses">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WFDstatus"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighTotalNitrogenMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalNitrogen"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PoorBadPhytobenthosMeasurement">
+    <rdfs:subClassOf rdf:resource="#Bad"/>
+    <rdfs:subClassOf rdf:resource="#Poor"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Phytobenthos_cat rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phytobenthos"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FailChem">
+    <rdfs:subClassOf rdf:resource="#WFDChemStatuses"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Invertebrate_fauna">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModeratePhenolMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phenol"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighDiazinonMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Diazinon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ECE">
+    <rdfs:subClassOf rdf:resource="#Standard"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nutrient_conditions">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WFD">
+    <rdfs:subClassOf rdf:resource="#Standard"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#WaterQuality">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateTurbidityMeasurement">
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Turbidity"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighTemperatureMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Temperature"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighTotalAmmoniaMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalAmmonia"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#PrioritySubstances">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#RiversWaterQuality"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateXylenesMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Xylenes"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodTotalPhosphorusMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Nutrient_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalPhosphorus"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodTurbidityMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Turbidity"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateCopperMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Copper"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Specific_pollutants">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#RiversWaterQuality"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodMRPMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#MolybdateReactivePhosphorus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#RiversWaterQuality"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Blue">
+    <owl:equivalentClass rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="#WFDEcoStatuses"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighLinuronMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <inwsc:Specific_pollutants rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Linuron"/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighSSMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SuspendedSolids"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateBODMeasurement">
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighGoodBenthicMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BenthicInvertebrateFauna"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodSulphateMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Sulphate"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Thermal_conditions">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodTotalAmmoniaMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalAmmonia"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodBODMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#WFDstatus">
+    <rdfs:subClassOf rdf:resource="#Status"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <WFD rdf:ID="WFDstandard"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasStandard"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Red">
+    <rdfs:subClassOf rdf:resource="#WFDEcoStatuses"/>
+    <owl:equivalentClass rdf:resource="#Bad"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateTemperatureMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Temperature"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HighSulphateMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Sulphate"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModerateLinuronMeasurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Linuron"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModeratePHMeasurement">
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighTolueneMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Toluene"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodHighZincMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Zinc"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Macrophytes">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Morphological_conditions">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydromorphological"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Orange">
+    <owl:equivalentClass rdf:resource="#Poor"/>
+    <rdfs:subClassOf rdf:resource="#WFDEcoStatuses"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HighGoodPhytobenthosMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phytobenthos"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighMRPMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#MolybdateReactivePhosphorus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HighTotalPhosphorusMeasurement">
+    <rdfs:subClassOf rdf:resource="#High"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalPhosphorus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodConductivityMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#WaterMeasurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Conductivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodModeratePhytobenthosMeasurement">
+    <rdfs:subClassOf rdf:resource="#Good"/>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Phytobenthos"/>
+        <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ObservationInstant">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#WFDstatus"/>
+        <owl:onProperty rdf:resource="#hasStatus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#WFDWaterHardnessStatus"/>
+        <owl:onProperty rdf:resource="#hasWaterHardnessStatus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd">
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasWFDObservationStatus"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning">
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup"/>
+  <rdf:Property rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleGroupEnabled"/>
+  <owl:DatatypeProperty rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasUnit"/>
+  <owl:DatatypeProperty rdf:about="#hasChemStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasEcoStatus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:Restriction>
+    <owl:allValuesFrom rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+  </owl:Restriction>
+  <owl:Restriction>
+    <owl:someValuesFrom rdf:resource="#Moderate"/>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
+  </owl:Restriction>
+  <owl:Restriction>
+    <owl:someValuesFrom rdf:resource="#Good"/>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
+  </owl:Restriction>
+  <body:River rdf:ID="River_3">
+    <hasChemStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</hasChemStatus>
+    <hasEcoStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</hasEcoStatus>
+    <dul:isObservableAt>
+      <ObservationInterval rdf:ID="Interval_6">
+        <time:hasEnd>
+          <time:Instant rdf:ID="Instant_8"/>
+        </time:hasEnd>
+        <hasStatus>
+          <GoodBODMeasurement rdf:ID="GoodBODMeasurement_11"/>
+        </hasStatus>
+        <hasStatus>
+          <HighDOMeasurement rdf:ID="HighDOMeasurement_12"/>
+        </hasStatus>
+        <time:hasBeginning>
+          <time:Instant rdf:ID="Instant_7"/>
+        </time:hasBeginning>
+      </ObservationInterval>
+    </dul:isObservableAt>
+    <dul:isObservableAt>
+      <time:Interval rdf:ID="Interval_14">
+        <time:hasBeginning>
+          <time:Instant rdf:ID="Instant_15"/>
+        </time:hasBeginning>
+        <time:hasEnd>
+          <time:Instant rdf:ID="Instant_16"/>
+        </time:hasEnd>
+      </time:Interval>
+    </dul:isObservableAt>
+  </body:River>
+  <body:River rdf:ID="River_4"/>
+  <owl:Restriction>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
+    <owl:someValuesFrom rdf:resource="#Good"/>
+  </owl:Restriction>
+  <owl:Restriction>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+    <owl:allValuesFrom rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+  </owl:Restriction>
+  <owl:Restriction>
+    <owl:allValuesFrom rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Physico-Chemical"/>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+  </owl:Restriction>
+  <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#AirTemperature"/>
+  <owl:Restriction>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+    <owl:allValuesFrom rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydromorphological"/>
+  </owl:Restriction>
+  <inwsc:Other rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#WaterHardness"/>
+  <inwsc:Nutrient_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Ammonium"/>
+  <owl:Restriction>
+    <owl:allValuesFrom rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Biological"/>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+  </owl:Restriction>
+  <owl:Restriction>
+    <owl:someValuesFrom rdf:resource="#Moderate"/>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
+  </owl:Restriction>
+  <owl:Restriction>
+    <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasElement"/>
+    <owl:allValuesFrom rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Hydromorphological"/>
+  </owl:Restriction>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:inws="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:foaf="http://www.topquadrant.com/composer/owl/library/foaf.owl#"
+    xmlns:xlminws="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dbo="http://dbpedia.org/ontology#"
+    xmlns="http://www.owl-ontologies.com/xLMINWS.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:time="https://www.w3.org/2006/time#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+  xml:base="http://www.owl-ontologies.com/xLMINWS.owl">
+  <owl:Ontology rdf:about=""/>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#CentralMonitoringNode">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ConductivitySensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PolicyMaker">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://dbpedia.org/ontology#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pHSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonDevice">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://dbpedia.org/ontology#Engineer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://dbpedia.org/ontology#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#Technician">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://dbpedia.org/ontology#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.w3.org/2006/time#Instant"/>
+  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#PhysicalObject"/>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonalUserDevice">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#ActiveCitizen">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://dbpedia.org/ontology#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#DissolvedOxygenSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Evaluation">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://dbpedia.org/ontology#Scientist">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://dbpedia.org/ontology#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#SmartPhone">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonalUserDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Monitoring">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#PhysicalObject"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#MonitoringComputer">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Reporting">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Calibration">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://dbpedia.org/ontology#Place"/>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#GatewayNode">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#VideoSurveillance">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Maintanance">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#WearableDevice">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PersonalUserDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://dbpedia.org/ontology#Person">
+    <owl:disjointWith rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TemperatureSensor">
+    <rdfs:subClassOf rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="isReported">
+    <rdfs:domain rdf:resource="#Reporting"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="externalPerson">
+    <owl:propertyDisjointWith>
+      <owl:ObjectProperty rdf:ID="internalPerson"/>
+    </owl:propertyDisjointWith>
+    <rdfs:range rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#PolicyMaker"/>
+    <rdfs:range rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#ActiveCitizen"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology#Scientist"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology#Person"/>
+    <rdfs:label xml:lang="en">externalPerson</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="closeTo">
+    <rdfs:label xml:lang="en">closeTo</rdfs:label>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology#Place"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology#Place"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isCalibrated">
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology#Engineer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#internalPerson">
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology#Person"/>
+    <rdfs:label xml:lang="en">internalPerson</rdfs:label>
+    <rdfs:range rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#Technician"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology#Engineer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isPerformed">
+    <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasActivity">
+    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Situation"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isMeassured">
+    <rdfs:range rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#Technician"/>
+    <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasPh">
+    <rdfs:label xml:lang="en">hasPh</rdfs:label>
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pHSensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCoordinates">
+    <rdfs:label xml:lang="en">hasCoordinates</rdfs:label>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology#Place"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTemperature">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:label xml:lang="en">hasTemperature</rdfs:label>
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TemperatureSensor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDissolvedOxygen">
+    <rdfs:label xml:lang="en">hasDissolvedOxygen</rdfs:label>
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#DissolvedOxygenSensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDeviceStatus">
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+    <rdfs:label xml:lang="en">hasDeviceStatus</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasDeviceID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNode"/>
+    <rdfs:label xml:lang="en">hasDeviceID</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    <rdfs:label xml:lang="en">hasTimestamp</rdfs:label>
+    <rdfs:domain rdf:resource="https://www.w3.org/2006/time#Instant"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasCamera">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/xlminws.owl#SmartPhone"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasConductivity">
+    <rdfs:label xml:lang="en">hasConductivity</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ConductivitySensor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasPersonID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology#Person"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
