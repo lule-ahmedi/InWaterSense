@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:inws-core="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://inwatersense.uni-pr.edu/ontologies/inws-polluters.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:body="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://inwatersense.uni-pr.edu/ontologies/inws-polluters.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="PollutionSources"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasSourcesOfPollution"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HeavyMetals">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Pollutant"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#PollutionSources">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Pollutant"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="potentialPollutant"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="pollutionType"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:ID="pollutionSourceName"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <PollutionSources rdf:ID="Farm_wastes_and_sillage">
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >point and diffuse</pollutionType>
+    <potentialPollutant>
+      <Pollutant rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+    </potentialPollutant>
+    <potentialPollutant>
+      <Pollutant rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    </potentialPollutant>
+    <potentialPollutant>
+      <Pollutant rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+    </potentialPollutant>
+    <potentialPollutant>
+      <Pollutant rdf:ID="Pathogens"/>
+    </potentialPollutant>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Farm wastes and sillage</pollutionSourceName>
+  </PollutionSources>
+  <PollutionSources rdf:ID="Contaminated_land">
+    <potentialPollutant>
+      <Pollutant rdf:ID="Organic_chemicals"/>
+    </potentialPollutant>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+    <potentialPollutant>
+      <HeavyMetals rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Zinc"/>
+    </potentialPollutant>
+    <potentialPollutant>
+      <HeavyMetals rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumVI"/>
+    </potentialPollutant>
+    <potentialPollutant>
+      <HeavyMetals rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Copper"/>
+    </potentialPollutant>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Contaminated land</pollutionSourceName>
+    <potentialPollutant>
+      <HeavyMetals rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumIII"/>
+    </potentialPollutant>
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >point and diffuse</pollutionType>
+    <potentialPollutant>
+      <Pollutant rdf:ID="Hydrocarbons"/>
+    </potentialPollutant>
+  </PollutionSources>
+  <Pollutant rdf:ID="Oil"/>
+  <PollutionSources rdf:ID="Agricultural_fertilisers">
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >diffuse</pollutionType>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Agricultural fertilisers</pollutionSourceName>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+  </PollutionSources>
+  <Pollutant rdf:ID="Sewage"/>
+  <body:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r1">
+    <hasSourcesOfPollution>
+      <PollutionSources rdf:ID="Urban_stormwater_discharges">
+        <potentialPollutant>
+          <Pollutant rdf:ID="Persistent_organic_pollutants"/>
+        </potentialPollutant>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumIII"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+        <potentialPollutant rdf:resource="#Pathogens"/>
+        <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Urban stormwater discharges</pollutionSourceName>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumVI"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Copper"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+        <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >point</pollutionType>
+        <potentialPollutant>
+          <Pollutant rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SuspendedSolids"/>
+        </potentialPollutant>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Zinc"/>
+        <potentialPollutant>
+          <Pollutant rdf:ID="Litter"/>
+        </potentialPollutant>
+        <potentialPollutant rdf:resource="#Hydrocarbons"/>
+      </PollutionSources>
+    </hasSourcesOfPollution>
+    <hasSourcesOfPollution>
+      <PollutionSources rdf:ID="Fish_farming">
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+        <potentialPollutant rdf:resource="#Pathogens"/>
+        <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Fish farming</pollutionSourceName>
+        <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >point</pollutionType>
+      </PollutionSources>
+    </hasSourcesOfPollution>
+    <hasSourcesOfPollution>
+      <PollutionSources rdf:ID="Mining">
+        <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Mining</pollutionSourceName>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Copper"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumIII"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumVI"/>
+        <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Zinc"/>
+        <potentialPollutant>
+          <Pollutant rdf:ID="Acid_mine_drainage"/>
+        </potentialPollutant>
+        <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >point and diffuse</pollutionType>
+      </PollutionSources>
+    </hasSourcesOfPollution>
+  </body:River>
+  <PollutionSources rdf:ID="Industrial_effluent">
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+    <potentialPollutant>
+      <Pollutant rdf:ID="A_broad_spectrum_of_chemicals"/>
+    </potentialPollutant>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Industrial effluent discharges treatment</pollutionSourceName>
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >point</pollutionType>
+  </PollutionSources>
+  <PollutionSources rdf:ID="Organic_waste">
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >diffuse</pollutionType>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Organic waste recycling to land</pollutionSourceName>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    <potentialPollutant rdf:resource="#Pathogens"/>
+  </PollutionSources>
+  <PollutionSources rdf:ID="Effluent_discharges">
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >point</pollutionType>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Effluent discharges from sewage treatment works</pollutionSourceName>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+    <potentialPollutant>
+      <Pollutant rdf:ID="Solids"/>
+    </potentialPollutant>
+    <potentialPollutant rdf:resource="#Pathogens"/>
+    <potentialPollutant rdf:resource="#Persistent_organic_pollutants"/>
+    <potentialPollutant rdf:resource="#Litter"/>
+  </PollutionSources>
+  <PollutionSources rdf:ID="Power_generation_facilities">
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    <potentialPollutant>
+      <Pollutant rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Sulphate"/>
+    </potentialPollutant>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Power generation facilities</pollutionSourceName>
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >diffuse</pollutionType>
+  </PollutionSources>
+  <PollutionSources rdf:ID="Landfill_sites">
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Landfill sites</pollutionSourceName>
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >point</pollutionType>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#BiochemicalOxygenDemand"/>
+    <potentialPollutant>
+      <Pollutant rdf:ID="Ammonia"/>
+    </potentialPollutant>
+  </PollutionSources>
+  <PollutionSources rdf:ID="Soil_cultivation">
+    <pollutionType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >diffuse</pollutionType>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#pH"/>
+    <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nitrogen"/>
+    <potentialPollutant>
+      <Pollutant rdf:ID="Soil"/>
+    </potentialPollutant>
+    <pollutionSourceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Soil cultivation</pollutionSourceName>
+  </PollutionSources>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
