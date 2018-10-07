@@ -1,9 +1,26 @@
 # InWaterSense
-<b>Ontologies for Water Quality Management</b>
+<p>This project comprises the whole Intelligent Wireless Sensor Networks for Monitoring Surface Water Quality (InWaterSense). For a detailed description of the InWaterSense project, please visit https://inwatersense.uni-pr.edu/.</p>
+
+<h3>Contact</h3>
+<p>
+For any questions related to the project in general or ontologies in particular, contact Professor Lule Ahmedi (Founder, Project Owner) at <a href="mailto:lule.ahmedi@uni-pr.edu?subject=InWaterSense">lule.ahmedi@uni-pr.edu</a>
+</p>
+
+<h3>The InWaterSense Ontologies</h3>
+<p>In this repositoy, currently only the ontologies (identified shortly as INWS ontologies) developed are provided (the Ontologies folder in this GitHub repository), namely:
+<ul>
+	<li>The set of three ontologies, <b>core, regulations, and pollutants ontologies</b> for supporting water quality management in general in an Internet of Things scenario like with wireless sensor networks (WSNs) deployed statically, and,</li>
+	<li>A lightweight <b>mobile version ontology</b> to rather support monitoring water quality via so-called mobile wireless sensors component which is flexible and can be carried out with ease into different locations for sensing the water.</li>
+</ul>
+
+Following is a brief description of these ontologies. The project site https://inwatersense.uni-pr.edu/ can be checked to find out more about the ontologies and the whole framework itself.
+</p>
+
+<b>The INWS Ontologies for Water Quality Management</b>
             <p>
                 An ontology for water quality management has been developed, named InWaterSense ontology. It is an OWL 2 ontology
                  which bases on the SSN ontology developed by W3C Semantic Sensor Network Incubator Group (SSN-XG), and is publicly
-                 available <a class='' href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/inws-core-regulations-pollutants.owl">here</a>.
+                 available <a class='' href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/inws-all3ontologies.owl">here</a>.
             </p>
             <p>
                 The ontology, as depicted in figure below, consists of four modules:
@@ -22,13 +39,25 @@
             </ol>
             </p>
 
-<div align=center><img src="https://inwatersense.uni-pr.edu/Images/Ontology.png" align="center" width=700px></br>
-                    <p align=center>Ontology framework modules</p>
+<div align=center><img src="https://inwatersense.uni-pr.edu/Images/inws-all3ontologies.png" align="center" width=500px></br>
+                    <p align=center>The INWS Ontologies for Water Quality Management</p>
 </div>
             
 <p>
-  Two use cases were approached to illustrate the usability of InWaterSense ontologies. In particular, a stream data 
+  Two use cases were approached (the Use-Cases folder in this GitHub repository) to illustrate the usability of InWaterSense ontologies. In particular, a stream data 
   scenario from the domain of surface water quality management and static data scenario from the domain of drinking 
   water quality management. A simulated rivers quality data sample can be found 
   <a class='' href="https://github.com/InWaterSense/Ontologies/Use-Cases/rivers_sampledata.owl">here</a> while a drinking waters quality  sample can be found <a class='' href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/Use-Cases/drinking_sampledata.owl">here</a>.
 </p>
+	
+
+<b>LMINWS - A Lightweight Mobile Context-Aware Ontology for Water Quality Management</b>
+<p>An ontology for water quality management through mobile wireless sensors has further been developed, namelly the lightweight mobile InWaterSense (LMINWS) ontology depicted below. It is an OWL ontology modeling the rather more rich-in-context but simple mobile portable sensors of a wireless sensor network (WSN), and is publicly available <a class='' href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/lminws.owl">here</a>.</p>
+
+<div align=center><img src="https://inwatersense.uni-pr.edu/Images/lminws-ontology.png" align="center" width=900px></br>
+                    <p align=center style="font-size: 9pt">LMINWS - A Lightweight Mobile Context-Aware Ontology for Water Quality Management</p>
+</div>
+
+<p>The classes of our lightweight ontology are depicted in black color, while the ones in white represent imports from other ontologies. For example, the Time ontology, its class DateTimeDescription has been extended with introducing two new subclasses in order to distinguish between the Day and the Night context.</p>
+
+<p>For more informaiton about the LMINWS ontology, see the publication https://inwatersense.uni-pr.edu/publications/MTSR2016.pdf .</p>
