@@ -39,21 +39,22 @@ Following is a brief description of these ontologies. The project site https://i
             </ol>
 
 <div align=center><img src="https://inwatersense.uni-pr.edu/Images/inws-all3ontologies.png" align="center" width=500px></br>
-</div>
+</div></br>
 
 <p>
   Two use cases were approached (the Use-Cases folder in this GitHub repository) to illustrate the usability of InWaterSense ontologies. In particular, a stream data 
   scenario from the domain of surface water quality management and static data scenario from the domain of drinking 
   water quality management. A simulated rivers quality data sample can be found 
-  <a href="https://github.com/InWaterSense/Ontologies/Use-Cases/rivers_sampledata.owl">here</a> while a drinking waters quality  sample can be found <a href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/Use-Cases/drinking_sampledata.owl">here</a>.
+  <a href="https://github.com/InWaterSense/Ontologies/Use-Cases/rivers_sampledata.owl">here</a> while a drinking waters quality sample can be found <a href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/Use-Cases/drinking_sampledata.owl">here</a>.
 </p>
+
 
 
 <h4>LMINWS - A Lightweight Context-Aware Ontology for Water Quality Management through Mobile Sensors</h4>
 <p>An ontology for water quality management through mobile wireless sensors has further been developed, namelly the lightweight mobile InWaterSense (LMINWS) ontology depicted below. It is an OWL ontology modeling the rather more rich-in-context but simple mobile portable sensors of a wireless sensor network (WSN), and is publicly available <a class='' href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/lminws.owl">here</a>.</p>
 
 <div align=center><img src="https://inwatersense.uni-pr.edu/Images/lminws-ontology.png" align="center" width=800px></br>
-</div>
+</div></br>
 
 <p>The classes of our lightweight ontology are depicted in black color, while the ones in white represent imports from other ontologies. For example, the Time ontology, its class DateTimeDescription has been extended with introducing two new subclasses in order to distinguish between the Day and the Night context.</p>
 
