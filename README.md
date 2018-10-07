@@ -21,7 +21,6 @@ Following is a brief description of these ontologies. The project site https://i
                 An ontology for water quality management has been developed, named InWaterSense ontology. It is an OWL 2 ontology
                  which bases on the SSN ontology developed by W3C Semantic Sensor Network Incubator Group (SSN-XG), and is publicly
                  available <a class='' href="https://github.com/InWaterSense/lule-ahmedi/Ontologies/inws-all3ontologies.owl">here</a>.
->>>>>>> 5274a8d00e6c3cb246afe1f28f909951ffcaac14
             </p>
             <p>
                 The ontology, as depicted in figure below, consists of four modules:
