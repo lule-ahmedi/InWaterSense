@@ -9,7 +9,6 @@
     xmlns:poll="http://inwatersense.uni-pr.edu/ontologies/inws-polluters.owl#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
-    xmlns:elem="http://sweet.jpl.nasa.gov/2.1/matrElement.owl#"
     xmlns:twcc="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -23,7 +22,6 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:body="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
@@ -152,9 +150,9 @@
       <owl:Class rdf:ID="WaterQuality_MeasurementCapability"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River">
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/River">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+      <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -162,7 +160,7 @@
           <owl:ObjectProperty rdf:ID="hasBasin"/>
         </owl:onProperty>
         <owl:someValuesFrom>
-          <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+          <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/Basin"/>
         </owl:someValuesFrom>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -260,7 +258,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:someValuesFrom>
-          <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+          <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/Basin"/>
         </owl:someValuesFrom>
         <owl:onProperty rdf:resource="#hasBasin"/>
       </owl:Restriction>
@@ -270,7 +268,7 @@
         <owl:onProperty>
           <owl:ObjectProperty rdf:ID="hasRiver"/>
         </owl:onProperty>
-        <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+        <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -321,7 +319,7 @@
       <owl:Class rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#PollutedThing"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+      <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="DrinkingWaterQuality">
@@ -396,7 +394,7 @@
   <owl:Class rdf:ID="SensingNodeLocation">
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+        <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
         <owl:onProperty>
           <owl:ObjectProperty rdf:ID="isMeasurementSiteOf"/>
         </owl:onProperty>
@@ -525,7 +523,7 @@
   <owl:Class rdf:about="http://escience.rpi.edu/ontology/semanteco/2/0/pollution.owl#PollutedSIte">
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+        <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
         <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
       </owl:Restriction>
     </rdfs:subClassOf>
@@ -603,7 +601,7 @@
       <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Parameter"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater">
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/BodyOfWater">
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty>
@@ -642,7 +640,7 @@
     <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Event"/>
     <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Stimulus"/>
   </owl:Class>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/matrElement.owl#ChemicalElement">
+  <owl:Class rdf:about="http://sweetontology.net/matrElement/ChemicalElement">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#Element"/>
     </rdfs:subClassOf>
@@ -1107,7 +1105,7 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin">
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/Basin">
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:someValuesFrom rdf:resource="#Municipality"/>
@@ -1172,14 +1170,14 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-        <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+        <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
     </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+    <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
   </owl:Class>
   <owl:Class rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#ExceededThreshold"/>
   <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property">
@@ -2019,12 +2017,12 @@
     <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
     <rdfs:domain>
       <owl:Restriction>
-        <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+        <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
         <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
       </owl:Restriction>
     </rdfs:domain>
     <rdfs:domain rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#MeasurementSite"/>
-    <rdfs:domain rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+    <rdfs:domain rdf:resource="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
     <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
     <rdfs:subPropertyOf>
       <owl:DatatypeProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
@@ -2062,12 +2060,12 @@
     <rdfs:domain rdf:resource="#SensingNodeLocation"/>
     <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Region"/>
     <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion"/>
-    <rdfs:domain rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+    <rdfs:domain rdf:resource="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
     <rdfs:domain rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#MeasurementSite"/>
     <rdfs:domain>
       <owl:Restriction>
         <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-        <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+        <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
       </owl:Restriction>
     </rdfs:domain>
     <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
@@ -2154,7 +2152,7 @@
     <owl:onProperty rdf:resource="#hasRFID"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
     <owl:onProperty rdf:resource="#hasBasin"/>
   </owl:Restriction>
   <WaterFeature rdf:ID="DrinkingWaterFeature"/>
@@ -2185,7 +2183,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#hasBasin"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#hasSensingNode"/>
@@ -2312,7 +2310,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#hasRiver"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
@@ -2342,7 +2340,7 @@
     <owl:onProperty rdf:resource="#hasDescription"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
     <owl:onProperty rdf:resource="#hasBasin"/>
   </owl:Restriction>
   <owl:Restriction>
@@ -2395,7 +2393,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
@@ -2441,12 +2439,12 @@
     <owl:onProperty rdf:resource="#isDeviceType"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
     <owl:onProperty rdf:resource="#hasBasin"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#hasRiver"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#doRelease"/>
@@ -2499,7 +2497,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
@@ -2536,7 +2534,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#hasBasin"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#consistOf"/>
@@ -2576,7 +2574,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation"/>
@@ -2584,7 +2582,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isRegionFor"/>
@@ -2595,7 +2593,7 @@
     <owl:someValuesFrom rdf:resource="#SensingNode"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
     <owl:onProperty rdf:resource="#hasRiver"/>
   </owl:Restriction>
   <owl:Restriction>
@@ -2634,7 +2632,7 @@
   </owl:Restriction>
   <owl:Restriction>
     <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
   </owl:Restriction>
   <owl:Restriction>
     <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
@@ -2669,7 +2667,7 @@
     <owl:someValuesFrom rdf:resource="#WaterQuality"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
     <owl:onProperty rdf:resource="#hasRiver"/>
   </owl:Restriction>
   <owl:Restriction>
@@ -2709,7 +2707,7 @@
     <owl:allValuesFrom rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#MeasurementSite"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/Basin"/>
     <owl:onProperty rdf:resource="#hasBasin"/>
   </owl:Restriction>
   <owl:Restriction>
@@ -2837,7 +2835,7 @@
     <owl:someValuesFrom rdf:resource="#DeviceType"/>
   </owl:Restriction>
   <owl:Restriction>
-    <owl:someValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+    <owl:someValuesFrom rdf:resource="http://sweetontology.net/realmHydroBody/River"/>
     <owl:onProperty rdf:resource="#isMeasurementSiteOf"/>
   </owl:Restriction>
   <owl:Restriction>
