@@ -12,7 +12,7 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:realmHydroBody="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#"
+    xmlns:soreahb="http://sweetontology.net/realmHydroBody/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
@@ -28,12 +28,12 @@
   <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
   <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue"/>
   <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Invertebrate_fauna"/>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#Basin"/>
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/Basin"/>
   <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
   <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#GatewayNode"/>
   <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Thermal_conditions"/>
   <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Nutrient_conditions"/>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River"/>
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/River"/>
   <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
   <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#SensingNodeLocation"/>
   <owl:Class rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Other"/>
@@ -96,11 +96,11 @@
     <qu:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >µS/cm</qu:symbol>
   </inws-core:Salinity>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r22">
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r22">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Bistrica Prizrenit</inws-core:hasName>
     <inws-core:hasBasin>
-      <realmHydroBody:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1">
+      <soreahb:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1">
         <inws-core:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >4649</inws-core:hasArea>
         <inws-core:hasAnnualFlowing rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -111,17 +111,17 @@
         >Adriatic Sea</inws-core:hasFlowingDirection>
         <inws-core:hasFlowingQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >61</inws-core:hasFlowingQuantity>
-      </realmHydroBody:Basin>
+      </soreahb:Basin>
     </inws-core:hasBasin>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r21">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r21">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Toplluha</inws-core:hasName>
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r20">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r20">
     <inws-core:hasBasin>
-      <realmHydroBody:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b2">
+      <soreahb:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b2">
         <inws-core:hasAnnualFlowing rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >771</inws-core:hasAnnualFlowing>
         <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -132,11 +132,11 @@
         >Black Sea</inws-core:hasFlowingDirection>
         <inws-core:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >4009</inws-core:hasArea>
-      </realmHydroBody:Basin>
+      </soreahb:Basin>
     </inws-core:hasBasin>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Drenica</inws-core:hasName>
-  </realmHydroBody:River>
+  </soreahb:River>
   <inws-core:Nutrient_conditions rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#TotalPhosphorus">
     <qu:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >mg/l</qu:symbol>
@@ -145,9 +145,9 @@
     <qu:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >%</qu:symbol>
   </inws-core:Other>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r23">
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r23">
     <inws-core:hasBasin>
-      <realmHydroBody:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b3">
+      <soreahb:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b3">
         <inws-core:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >1564</inws-core:hasArea>
         <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -158,11 +158,11 @@
         >Black Sea</inws-core:hasFlowingDirection>
         <inws-core:hasAnnualFlowing rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >330</inws-core:hasAnnualFlowing>
-      </realmHydroBody:Basin>
+      </soreahb:Basin>
     </inws-core:hasBasin>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Kriva Reka</inws-core:hasName>
-  </realmHydroBody:River>
+  </soreahb:River>
   <ssn:Device rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#d9">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Device 7</inws-core:hasName>
@@ -178,41 +178,41 @@
     <inws-core:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Device 7</inws-core:hasDescription>
   </ssn:Device>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r2">
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r2">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Mirusha</inws-core:hasName>
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r4">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r4">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Ereniku</inws-core:hasName>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r3">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r3">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Drini i Bardhë</inws-core:hasName>
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r6">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r6">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b2"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Llapi</inws-core:hasName>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r7">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r7">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Bistrica e Pejës</inws-core:hasName>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r5">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r5">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b2"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Sitnica</inws-core:hasName>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r9">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r9">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Lepenci</inws-core:hasName>
     <inws-core:hasBasin>
-      <realmHydroBody:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b4">
+      <soreahb:Basin rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b4">
         <inws-core:hasFlowingQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >8.7</inws-core:hasFlowingQuantity>
         <inws-core:hasFlowingDirection rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -223,29 +223,29 @@
         >307</inws-core:hasAnnualFlowing>
         <inws-core:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >0.685</inws-core:hasArea>
-      </realmHydroBody:Basin>
+      </soreahb:Basin>
     </inws-core:hasBasin>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r8">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r8">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b3"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Morava e Binçës</inws-core:hasName>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r18">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r18">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Klina</inws-core:hasName>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r17">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r17">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Istogu</inws-core:hasName>
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
-  </realmHydroBody:River>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r19">
+  </soreahb:River>
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r19">
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b1"/>
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Bistrica e Deçanit</inws-core:hasName>
-  </realmHydroBody:River>
+  </soreahb:River>
   <ssn:Device rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#d4">
     <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
     <inws-core:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -256,11 +256,11 @@
     >Device 3</inws-core:hasName>
     <inws-core:isDeviceType rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#t7"/>
   </ssn:Device>
-  <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r10">
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r10">
     <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Nerodime</inws-core:hasName>
     <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b4"/>
-  </realmHydroBody:River>
+  </soreahb:River>
   <inws-core:GatewayNode rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#g2">
     <inws-core:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Gateway 1</inws-core:hasDescription>
@@ -408,11 +408,11 @@
     <inws-core:hasMeasurementSite>
       <epa:MeasurementSite rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ms12">
         <inws-core:isMeasurementSiteOf>
-          <realmHydroBody:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r1">
+          <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r1">
             <inws-core:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Ibri</inws-core:hasName>
             <inws-core:hasBasin rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#b2"/>
-          </realmHydroBody:River>
+          </soreahb:River>
         </inws-core:isMeasurementSiteOf>
         <inws-core:hasDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >DeploymentSites 2</inws-core:hasDescription>

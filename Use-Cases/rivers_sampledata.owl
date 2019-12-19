@@ -6,7 +6,7 @@
   <!ENTITY owl "http://www.w3.org/2002/07/owl#">
   <!ENTITY qu "http://www.purl.oclc.org/NET/ssnx/qu/qu#">
   <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <!ENTITY realmHydroBody "http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#">
+  <!ENTITY soreahb "http://sweetontology.net/realmHydroBody/">
   <!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn#">
   <!ENTITY testMap11 "file:/C:/d2rq-0.8.1/testMap11.owl">
   <!ENTITY time "http://www.w3.org/2006/time#">
@@ -20,7 +20,7 @@
          xmlns:owl="&owl;"
          xmlns:qu="&qu;"
          xmlns:rdf="&rdf;"
-         xmlns:realmHydroBody="&realmHydroBody;"
+         xmlns:soreahb="&soreahb;"
          xmlns:ssn="&ssn;"
          xmlns:time="&time;"
          xmlns:wgs84_pos="&wgs84_pos;">
@@ -34,8 +34,8 @@
   <owl:Class rdf:about="&ssn;ObservationValue"/>
   <owl:Class rdf:about="&ssn;Sensor"/>
   <owl:Class rdf:about="&ssn;SensorOutput"/>
-  <owl:Class rdf:about="&realmHydroBody;Basin"/>
-  <owl:Class rdf:about="&realmHydroBody;River"/>
+  <owl:Class rdf:about="&soreahb;Basin"/>
+  <owl:Class rdf:about="&soreahb;River"/>
   <owl:Class rdf:about="&epa;MeasurementSite"/>
   <owl:Class rdf:about="&ont;Acidification_status"/>
   <owl:Class rdf:about="&ont;CentralMonitoringNode"/>
@@ -127,25 +127,25 @@
     <qu:symbol rdf:datatype="&xsd;string">NTU</qu:symbol>
   </ont:Other>
 
-  <realmHydroBody:Basin rdf:about="&ont;b1"
+  <soreahb:Basin rdf:about="&ont;b1"
                         ont:hasAnnualFlowing="2.2"
                         ont:hasArea="4649"
                         ont:hasFlowingDirection="Adriatic Sea"
                         ont:hasFlowingQuantity="61"
                         ont:hasName="Drini i Bardhe"/>
-  <realmHydroBody:Basin rdf:about="&ont;b2"
+  <soreahb:Basin rdf:about="&ont;b2"
                         ont:hasAnnualFlowing="771"
                         ont:hasArea="4009"
                         ont:hasFlowingDirection="Black Sea"
                         ont:hasFlowingQuantity="32.6"
                         ont:hasName="Ibri"/>
-  <realmHydroBody:Basin rdf:about="&ont;b3"
+  <soreahb:Basin rdf:about="&ont;b3"
                         ont:hasAnnualFlowing="330"
                         ont:hasArea="1564"
                         ont:hasFlowingDirection="Black Sea"
                         ont:hasFlowingQuantity="6.1"
                         ont:hasName="Morava e Binces"/>
-  <realmHydroBody:Basin rdf:about="&ont;b4"
+  <soreahb:Basin rdf:about="&ont;b4"
                         ont:hasAnnualFlowing="307"
                         ont:hasArea="0.685"
                         ont:hasFlowingDirection="Aegean Sea"
@@ -6951,55 +6951,55 @@
     <ont:hasObservationTime rdf:datatype="&xsd;dateTime">2013-02-13T09:11:08.477</ont:hasObservationTime>
   </time:Instant>
 
-  <realmHydroBody:River rdf:about="&ont;r1"
+  <soreahb:River rdf:about="&ont;r1"
                         ont:hasName="Ibri">
     <ont:hasBasin rdf:resource="&ont;b2"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r10"
+  <soreahb:River rdf:about="&ont;r10"
                         ont:hasName="Nerodime">
     <ont:hasBasin rdf:resource="&ont;b4"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r2"
+  <soreahb:River rdf:about="&ont;r2"
                         ont:hasName="Mirusha">
     <ont:hasBasin rdf:resource="&ont;b1"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r3"
+  <soreahb:River rdf:about="&ont;r3"
                         ont:hasName="Drini i Bardhe">
     <ont:hasBasin rdf:resource="&ont;b1"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r4"
+  <soreahb:River rdf:about="&ont;r4"
                         ont:hasName="Ereniku">
     <ont:hasBasin rdf:resource="&ont;b1"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r5"
+  <soreahb:River rdf:about="&ont;r5"
                         ont:hasName="Sitnica">
     <ont:hasBasin rdf:resource="&ont;b2"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r6"
+  <soreahb:River rdf:about="&ont;r6"
                         ont:hasName="Llapi">
     <ont:hasBasin rdf:resource="&ont;b2"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r7"
+  <soreahb:River rdf:about="&ont;r7"
                         ont:hasName="Bistrica e Pejses">
     <ont:hasBasin rdf:resource="&ont;b1"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r8"
+  <soreahb:River rdf:about="&ont;r8"
                         ont:hasName="Morava e Binces">
     <ont:hasBasin rdf:resource="&ont;b3"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
-  <realmHydroBody:River rdf:about="&ont;r9"
+  <soreahb:River rdf:about="&ont;r9"
                         ont:hasName="Lepenci">
     <ont:hasBasin rdf:resource="&ont;b4"/>
-  </realmHydroBody:River>
+  </soreahb:River>
 
   <ont:SensingNodeLocation rdf:about="&ont;sl1"
                            ont:hasObservationStartTime="2013-01-01T00:00:00">

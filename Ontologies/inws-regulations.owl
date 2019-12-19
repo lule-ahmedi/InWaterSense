@@ -2,13 +2,10 @@
 <rdf:RDF
     xmlns:inwsc="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#"
     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:comp="http://sweet.jpl.nasa.gov/2.1/matrCompound.owl#"
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
     xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#"
-    xmlns:repr="http://sweet.jpl.nasa.gov/2.1/repr.owl#"
     xmlns:time="http://www.w3.org/2006/time#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:elem="http://sweet.jpl.nasa.gov/2.1/matrElement.owl#"
     xmlns:twcp="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns="http://inwatersense.uni-pr.edu/ontologies/inws-regulations.owl#"
@@ -16,10 +13,9 @@
     xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:body="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#"
+    xmlns:soreahb="http://sweetontology.net/realmHydroBody/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
-    xmlns:chem="http://sweet.jpl.nasa.gov/2.1/matr.owl#"
     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
   xml:base="http://inwatersense.uni-pr.edu/ontologies/inws-regulations.owl">
   <owl:Ontology rdf:about=""/>
@@ -156,9 +152,9 @@
       </owl:Restriction>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River">
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/River">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+      <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="ModerateSSMeasurement">
@@ -410,7 +406,7 @@
   <owl:Class rdf:ID="ECEstatus">
     <rdfs:subClassOf rdf:resource="#Status"/>
   </owl:Class>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater">
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/BodyOfWater">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -755,7 +751,7 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#MeasurementSite">
-    <rdfs:subClassOf rdf:resource="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+    <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
   </owl:Class>
   <owl:Class rdf:ID="GoodHighArsenicMeasurement">
     <rdfs:subClassOf rdf:resource="#Good"/>
@@ -1183,7 +1179,7 @@
     <owl:someValuesFrom rdf:resource="#Good"/>
     <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
   </owl:Restriction>
-  <body:River rdf:ID="River_3">
+  <soreahb:River rdf:ID="River_3">
     <hasChemStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
     >true</hasChemStatus>
     <hasEcoStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -1214,8 +1210,8 @@
         </time:hasEnd>
       </time:Interval>
     </dul:isObservableAt>
-  </body:River>
-  <body:River rdf:ID="River_4"/>
+  </soreahb:River>
+  <soreahb:River rdf:ID="River_4"/>
   <owl:Restriction>
     <owl:onProperty rdf:resource="http://tw2.tw.rpi.edu/zhengj3/owl/epa.owl#hasMeasurement"/>
     <owl:someValuesFrom rdf:resource="#Good"/>

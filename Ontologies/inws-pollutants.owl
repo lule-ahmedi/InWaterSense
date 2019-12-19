@@ -10,14 +10,14 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns="http://inwatersense.uni-pr.edu/ontologies/inws-pollutants.owl#"
-    xmlns:body="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#"
+    xmlns:soreahb="http://sweetontology.net/realmHydroBody/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
   xml:base="http://inwatersense.uni-pr.edu/ontologies/inws-pollutants.owl">
   <owl:Ontology rdf:about=""/>
-  <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#River">
+  <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/River">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://sweet.jpl.nasa.gov/2.1/realmHydroBody.owl#BodyOfWater"/>
+      <owl:Class rdf:about="http://sweetontology.net/realmHydroBody/BodyOfWater"/>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
@@ -126,7 +126,7 @@
     >point</pollutionType>
   </PollutionSources>
   <Pollutant rdf:ID="Sewage"/>
-  <body:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r1">
+  <soreahb:River rdf:about="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#r1">
     <hasSourcesOfPollution>
       <PollutionSources rdf:ID="Urban_stormwater_discharges">
         <potentialPollutant rdf:resource="#Pathogens"/>
@@ -186,7 +186,7 @@
         >Mining</pollutionSourceName>
       </PollutionSources>
     </hasSourcesOfPollution>
-  </body:River>
+  </soreahb:River>
   <PollutionSources rdf:ID="Contaminated_land">
     <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#Copper"/>
     <potentialPollutant rdf:resource="http://inwatersense.uni-pr.edu/ontologies/inws-core.owl#ChromiumVI"/>
